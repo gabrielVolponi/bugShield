@@ -5,41 +5,110 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BugShield - Consultoria Especializada em Qualidade de Software</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <meta name="description" content="BugShield: Consultoria especializada em qualidade de software, oferecendo soluções completas em QA, automação de testes e arquitetura de qualidade.">
+    <style>
+        /* Otimizações para mobile */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        /* Animações suaves */
+        .hover-scale {
+            transition: transform 0.2s ease-in-out;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body class="bg-black text-white font-sans">
+    <!-- Navbar Responsiva -->
+    <nav class="fixed w-full bg-black bg-opacity-90 z-50 px-4 sm:px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <img src="logo.png" alt="BugShield Logo" class="h-8 sm:h-10">
+            <button class="text-purple-500 hover:text-purple-400 text-2xl sm:hidden">☰</button>
+            <div class="hidden sm:flex space-x-6">
+                <a href="#servicos" class="text-gray-300 hover:text-purple-400 transition">Serviços</a>
+                <a href="#metodologia" class="text-gray-300 hover:text-purple-400 transition">Metodologia</a>
+                <a href="#equipe" class="text-gray-300 hover:text-purple-400 transition">Equipe</a>
+                <a href="#contato" class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-full transition">Contato</a>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 py-12 bg-black">
-        <img src="logo.png" alt="BugShield Logo" class="w-32 h-32 mb-8 mx-auto">
-        <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 text-white">
-            Protegendo seu software com <span class="text-purple-500">excelência em QA</span> 🛡️
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Criamos e consolidamos a cultura de qualidade dentro da sua organização, desde a arquitetura de testes até a implementação de práticas de melhoria contínua.
-        </p>
-        <a href="https://wa.me/SEUNUMERO" target="_blank" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg shadow-lg transition">
-            Solicite uma consultoria gratuita 💬
-        </a>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 py-20 bg-black">
+        <div class="max-w-4xl mx-auto">
+            <img src="logo.png" alt="BugShield Logo" class="w-24 sm:w-32 h-auto mb-6 sm:mb-8 mx-auto">
+            <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold mb-4 text-white leading-tight">
+                Protegendo seu software com 
+                <span class="text-purple-500 block sm:inline">excelência em QA</span> 🛡️
+            </h1>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Criamos e consolidamos a cultura de qualidade dentro da sua organização, desde a arquitetura de testes até a implementação de práticas de melhoria contínua.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contato" 
+                   class="w-full sm:w-auto inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 sm:px-8 rounded-full text-base sm:text-lg shadow-lg transition hover-scale">
+                    Fale Conosco 💬
+                </a>
+                <a href="#servicos" 
+                   class="w-full sm:w-auto inline-block bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-6 sm:px-8 rounded-full text-base sm:text-lg shadow-lg transition hover-scale">
+                    Conheça Nossos Serviços 🎯
+                </a>
+            </div>
+        </div>
     </section>
 
-    <!-- Serviços Principais -->
-    <section class="py-16 px-6 bg-gradient-to-b from-black via-gray-900 to-black">
-        <h2 class="text-2xl sm:text-3xl font-bold text-purple-400 mb-12 text-center">Nossas Soluções Completas 🎯</h2>
-        <div class="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-gray-900 rounded-xl p-6 shadow-lg border-l-4 border-purple-600">
-                <h3 class="text-xl font-semibold mb-3">Arquitetura de Qualidade 🏗️</h3>
-                <p class="text-gray-300">Projetamos sistemas com alta robustez, escalabilidade e performance, integrando práticas de qualidade desde o início do desenvolvimento.</p>
-            </div>
-            
-            <div class="bg-gray-900 rounded-xl p-6 shadow-lg border-l-4 border-purple-600">
-                <h3 class="text-xl font-semibold mb-3">Automação de Testes 🤖</h3>
-                <p class="text-gray-300">Implementação completa com Cypress, Playwright e Robot Framework para Web, Mobile e Testes de Performance.</p>
-            </div>
+    <!-- Serviços Grid -->
+    <section id="servicos" class="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-purple-400 mb-12">
+                Soluções Completas em QA 🚀
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Automação -->
+                <div class="bg-gray-900 rounded-xl p-6 border-l-4 border-purple-600 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🤖</span>
+                        <h3 class="text-xl font-semibold">Automação de Testes</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Cypress & Playwright</li>
+                        <li>• Robot Framework</li>
+                        <li>• Testes Mobile com Appium</li>
+                        <li>• Testes de Performance (k6)</li>
+                    </ul>
+                </div>
 
-            <div class="bg-gray-900 rounded-xl p-6 shadow-lg border-l-4 border-purple-600">
-                <h3 class="text-xl font-semibold mb-3">Alocação de QAs 👥</h3>
-                <p class="text-gray-300">Profissionais especializados para integrar sua equipe, trazendo expertise e melhores práticas de QA.</p>
+                <!-- Arquitetura -->
+                <div class="bg-gray-900 rounded-xl p-6 border-l-4 border-purple-600 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">🏗️</span>
+                        <h3 class="text-xl font-semibold">Arquitetura de Qualidade</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Planejamento de Testes</li>
+                        <li>• CI/CD Integration</li>
+                        <li>• Análise de Requisitos</li>
+                        <li>• Melhores Práticas</li>
+                    </ul>
+                </div>
+
+                <!-- Consultoria -->
+                <div class="bg-gray-900 rounded-xl p-6 border-l-4 border-purple-600 hover-scale">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">👥</span>
+                        <h3 class="text-xl font-semibold">Consultoria & Treinamento</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>• Alocação de QAs</li>
+                        <li>• Capacitação de Equipes</li>
+                        <li>• Mentoria Técnica</li>
+                        <li>• Processos de QA</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -135,6 +204,5 @@
         </div>
         <p class="text-gray-500 text-sm">&copy; 2025 BugShield. Todos os direitos reservados.</p>
     </footer>
-
 </body>
 </html>

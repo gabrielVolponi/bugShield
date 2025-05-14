@@ -1,0 +1,27 @@
+::-webkit-scrollbar {
+        width: 20px; 
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: #6e0cce;
+        border-radius: 4px; 
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #805ad5; /* Cor roxa mais clara ao passar o mouse */
+      }
+
+      /* Otimizações para mobile */
+      @media (max-width: 640px) {
+        .container {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+      /* Animações suaves */
+      .hover-scale {
+        transition: transform 0.2s ease-in-out;
+      }
+      .hover-scale:hover {
+        transform: scale(1.05);
+      }
